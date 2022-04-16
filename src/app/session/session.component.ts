@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SessionService } from './session.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Session } from '../model/session';
 
 @Component({
@@ -8,13 +7,10 @@ import { Session } from '../model/session';
   styleUrls: ['./session.component.scss'],
 })
 export class SessionComponent implements OnInit {
-  sessions: Session[] = [];
+  @Input()
+  session: Session;
 
-  constructor(private sessionService: SessionService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.sessionService
-      .getAllSession()
-      .subscribe((sessions) => (this.sessions = sessions));
-  }
+  ngOnInit(): void {}
 }

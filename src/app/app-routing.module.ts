@@ -1,15 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SessionComponent } from "./session/session.component";
+import { SessionListComponent } from './session/session-list/session-list.component';
 
-const routes: Routes = [
-  { path: '', component: SessionComponent }
-];
+const routes: Routes = [{ path: '', component: SessionListComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}

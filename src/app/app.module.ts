@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SessionComponent } from './session/session.component';
 import { HttpClientModule } from "@angular/common/http";
+import { NavbarComponent } from './ui/navbar/navbar.component';
+import { SessionListComponent } from './session/session-list/session-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SessionComponent
+    SessionComponent,
+    NavbarComponent,
+    SessionListComponent
   ],
   imports: [
     BrowserModule,
